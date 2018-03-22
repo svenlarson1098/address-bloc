@@ -1,8 +1,7 @@
 greeting = ARGV.shift
-
-    ARGV.each do |names|
-     puts "#{greeting} #{names}"
-    end
+  ARGV.each do |names|
+  puts "#{greeting} #{names}"
+end
 
 
  
