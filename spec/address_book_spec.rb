@@ -69,7 +69,11 @@ RSpec.describe AddressBook do
   expect(book_size).to eq 5
   end
 end
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> 66a65fe93968c48298d8d49d7841c7a521216fef
 # #4
  it "imports the 1st entry" do
    book.import_from_csv("entries.csv")
@@ -106,6 +110,7 @@ end
        check_entry(entry_five, "Sussie","555-555-2036", "sussie@blocmail.com")
   end
 end
+<<<<<<< HEAD
 
   context "importing from entries_2.csv" do
     it "imports the correct number of entries" do
@@ -136,3 +141,5 @@ end
    end 
  end
 end
+=======
+>>>>>>> 66a65fe93968c48298d8d49d7841c7a521216fef
