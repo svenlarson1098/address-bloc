@@ -46,6 +46,16 @@ require "csv"
     add_entry(row_hash["name"], row_hash["phone_number"], row_hash["email"])
     end
   end
+=begin  
+    def iterative_search(name)
+    @entries.each do |entry|
+      if entry.name == name
+        return entry
+      end
+      return nil
+      end
+=end
+  
   def binary_search(name)
     # #1
       lower = 0 
@@ -67,6 +77,15 @@ require "csv"
       end
       end
     # #5
+      return nil
+  end
+
+  def iterative_search(name)
+    @entries.each do |entry|
+      if entry.name == name
+        return entry
+      end
+      end
       return nil
   end
   end
