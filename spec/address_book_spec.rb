@@ -41,8 +41,19 @@ RSpec.describe AddressBook do
       expect(book.entries.first.name).to eq("Sven Larson")
     end
   end
+  
+  context "#annihilate" do
+    it "deletes all entries from address book" do
+    book.add_entry("Sven Larson", "415.246.0000", "svenlarson1098@gmail.com")
+    book.add_entry("Sven Larson", "415.246.0000", "svenlarson1098@gmail.com")
+    book.add_entry("Sven Larson", "415.246.0000", "svenlarson1098@gmail.com")
+  
+    book.annihilate
+    expect(book.entries.size).to eq 0
+  end
+end
       
-  describe"#add_entry" do
+  describe "#add_entry" do
     it "adds only one entry to the address book" do
         book.add_entry('Ada Lovelace', '010.012.1815', 'augusta.king@lovelace.com')
       
@@ -186,7 +197,7 @@ RSpec.describe AddressBook do
       expect(entry).to be_nil
     end
   end
-  
+#  ((((ASSIGNMENT))))
   # Test the iterative_search method
   describe ".iterative_search" do
     it "searches AddressBook for a non-existent entry" do
